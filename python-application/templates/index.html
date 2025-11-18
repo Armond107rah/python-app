@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1 class="title">🚀 Python Application</h1>
+                <p class="subtitle">Deployed on AWS ECS</p>
+            </div>
+            
+            <div class="content">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🐍</div>
+                        <h3>Python Powered</h3>
+                        <p>Built with Flask framework</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🐳</div>
+                        <h3>Dockerized</h3>
+                        <p>Containerized for easy deployment</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">☁️</div>
+                        <h3>Cloud Ready</h3>
+                        <p>Optimized for AWS ECS</p>
+                    </div>
+                </div>
+
+                <div class="stats-section">
+                    <div class="stat-item">
+                        <div class="stat-value" id="uptime">0</div>
+                        <div class="stat-label">Days Uptime</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="requests">0</div>
+                        <div class="stat-label">Requests</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Reliability</div>
+                    </div>
+                </div>
+
+                <div class="action-section">
+                    <button class="btn btn-primary" onclick="updateStats()">Refresh Stats</button>
+                    <button class="btn btn-secondary" onclick="checkHealth()">Check Health</button>
+                </div>
+
+                <div class="status-message" id="statusMessage"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Built with ❤️ for AWS ECS Deployment</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
